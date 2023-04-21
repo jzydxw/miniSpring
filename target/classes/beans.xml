@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<beans>
+    <bean id = "student" class = "ioc1.Student"></bean>
+    <bean id = "aService" class="ioc1.AServiceImpl"></bean>
+
+<!--    setter 注入-->
+    <bean id = "aService" class="ioc3.AServiceImpl">
+        <property type="String" name = "property1" value = "hello world"/>
+        <constructor-arg type="int" name="level" value="3"/>
+        <property type="ioc1.Student" name="ref1" ref="student" />
+    </bean>
+</beans>
